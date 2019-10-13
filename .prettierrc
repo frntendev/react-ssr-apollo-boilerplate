@@ -1,0 +1,15 @@
+printWidth: 100
+singleQuote: true
+tabWidth: 2
+trailingComma: es5
+semi: true
+arrowParens: always
+quoteProps: consistent
+
+overrides:
+  - files: "*.json"
+    options:
+      tabWidth: 2
+  - files: "*.yml"
+    options:
+      tabWidth: 2
