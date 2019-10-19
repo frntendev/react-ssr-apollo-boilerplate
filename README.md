@@ -1,5 +1,6 @@
 # React Server Side Rendering Using GraphQL and apollo
 A baseline for server side rendering for your React application using GraphQL Apollo.
+Inspired by https://github.com/manuelbieh/react-ssr-setup
 
 ## Getting started
 Clone the repo with
