@@ -5,6 +5,8 @@ import { ApolloProvider } from '@apollo/react-hooks';
 import { ApolloClient } from 'apollo-client';
 import { createHttpLink } from 'apollo-link-http';
 import { InMemoryCache } from 'apollo-cache-inmemory';
+import { HelmetProvider } from 'react-helmet-async';
+
 import App from '../app/App';
 import { GRAPHQL_ENDPOINT } from '../app/graphql/variables';
 
@@ -20,7 +22,9 @@ function Main() {
   return (
     <ApolloProvider client={client}>
       <BrowserRouter>
-        <App />
+        <HelmetProvider>
+          <App />
+        </HelmetProvider>
       </BrowserRouter>
     </ApolloProvider>
   );

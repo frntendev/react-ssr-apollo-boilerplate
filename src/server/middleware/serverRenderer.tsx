@@ -8,10 +8,14 @@ import { ApolloProvider } from '@apollo/react-hooks';
 import { ApolloClient } from 'apollo-client';
 import { createHttpLink } from 'apollo-link-http';
 import { InMemoryCache } from 'apollo-cache-inmemory';
-import App from '../../app/App';
-import Html from '../components/HTML';
+import { HelmetProvider } from 'react-helmet-async';
+
 import { GRAPHQL_ENDPOINT } from 'app/graphql/variables';
 
+import App from '../../app/App';
+import Html from '../components/HTML';
+
+const helmetContext = {};
 const routerContext = {};
 
 const serverRenderer: any = () => async (req: express.Request, res: express.Response) => {
@@ -29,7 +33,9 @@ const serverRenderer: any = () => async (req: express.Request, res: express.Resp
   const Application = (
     <ApolloProvider client={client}>
       <Router location={req.url} context={routerContext}>
-        <App />
+        <HelmetProvider context={helmetContext}>
+          <App />
+        </HelmetProvider>
       </Router>
     </ApolloProvider>
   );
@@ -43,6 +49,7 @@ const serverRenderer: any = () => async (req: express.Request, res: express.Resp
           <Html
             scripts={[res.locals.assetPath('bundle.js'), res.locals.assetPath('vendor.js')]}
             initialApolloState={JSON.stringify(initialApolloState)}
+            helmetContext={helmetContext}
           >
             {content}
           </Html>
