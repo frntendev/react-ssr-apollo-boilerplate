@@ -1,11 +1,12 @@
 /** @jsx jsx */
 import React from 'react';
-import { jsx } from '@emotion/core';
-import { Link } from 'react-router-dom';
-import { useQuery } from '@apollo/react-hooks';
-import { Helmet } from 'react-helmet-async';
 
-import { User } from '../../../graphql/types';
+import { useQuery } from '@apollo/client';
+import { jsx } from '@emotion/react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+
+import { User } from '../../graphql/types';
 import { UsersQuery } from './HomePage.gql';
 import { GqlResponse } from './HomePage.types';
 import styles from './HomePage.styles';

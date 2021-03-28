@@ -1,13 +1,11 @@
 import React from 'react';
+
+import { ApolloProvider, ApolloClient, createHttpLink, InMemoryCache } from '@apollo/client';
+import { renderToStringWithData } from '@apollo/client/react/ssr';
 import * as express from 'express';
-import fetch from 'node-fetch';
+import fetch from 'isomorphic-fetch';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { StaticRouter as Router } from 'react-router-dom';
-import { renderToStringWithData } from '@apollo/react-ssr';
-import { ApolloProvider } from '@apollo/react-hooks';
-import { ApolloClient } from 'apollo-client';
-import { createHttpLink } from 'apollo-link-http';
-import { InMemoryCache } from 'apollo-cache-inmemory';
 import { HelmetProvider } from 'react-helmet-async';
 
 import { GRAPHQL_ENDPOINT } from 'app/graphql/variables';
@@ -24,7 +22,7 @@ const serverRenderer: any = () => async (req: express.Request, res: express.Resp
     link: createHttpLink({
       uri: GRAPHQL_ENDPOINT,
       credentials: 'same-origin',
-      fetch: fetch as any,
+      fetch,
     }),
     cache: new InMemoryCache(),
     ssrForceFetchDelay: 100,

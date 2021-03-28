@@ -1,8 +1,9 @@
 /** @jsx jsx */
 import React from 'react';
-import { jsx } from '@emotion/core';
-import { Link } from 'react-router-dom';
+
+import { jsx } from '@emotion/react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
 import styles from './AboutPage.styles';
 

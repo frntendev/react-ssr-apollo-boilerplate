@@ -1,6 +1,6 @@
 import * as Routes from '../../../config/routeNames';
-import HomePage from '../scenes/home/components/HomePage';
-import AboutPage from '../scenes/about/components/AboutPage';
+import HomePage from '../scenes/home/HomePage';
+import AboutPage from '../scenes/about/AboutPage';
 
 export default [
   {

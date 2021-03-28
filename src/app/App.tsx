@@ -1,7 +1,9 @@
 /** @jsx jsx */
 import React from 'react';
-import { jsx, css, Global } from '@emotion/core';
+
+import { jsx, css, Global } from '@emotion/react';
 import { Route, Switch } from 'react-router-dom';
+
 import routes from '../app/routes';
 
 const App: React.FC<any> = () => {

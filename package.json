@@ -1,6 +1,6 @@
 {
   "name": "react-ssr-apollo-boilerplate",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "author": "Sepehr Aliakbari",
   "engines": {
     "node": ">=8.11.3",
@@ -23,14 +23,8 @@
     ]
   },
   "dependencies": {
-    "@apollo/react-common": "^3.1.4",
-    "@apollo/react-hooks": "^3.1.5",
-    "@apollo/react-ssr": "^3.1.5",
-    "@emotion/core": "^10.0.28",
-    "apollo-boost": "^0.4.9",
-    "apollo-cache-inmemory": "^1.6.6",
-    "apollo-client": "^2.6.10",
-    "apollo-link-http": "^1.5.17",
+    "@apollo/client": "^3.3.13",
+    "@emotion/react": "^11.1.5",
     "body-parser": "^1.19.0",
     "chalk": "^2.4.2",
     "cors": "^2.8.5",
@@ -43,16 +37,16 @@
     "graphql-tag": "^2.11.0",
     "history": "^4.9.0",
     "immer": "^3.2.0",
-    "node-fetch": "^2.6.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "isomorphic-fetch": "^3.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-helmet-async": "^1.0.6",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "serve-static": "^1.13.2"
   },
   "devDependencies": {
-    "@babel/cli": "^7.10.5",
+    "@babel/cli": "^7.13.10",
     "@babel/core": "^7.11.1",
     "@babel/plugin-proposal-class-properties": "^7.10.4",
     "@babel/plugin-proposal-object-rest-spread": "^7.11.0",
@@ -71,9 +65,8 @@
     "@types/cors": "^2.8.7",
     "@types/dotenv": "^6.1.1",
     "@types/express": "^4.17.7",
+    "@types/isomorphic-fetch": "0.0.35",
     "@types/jest": "^24.9.1",
-    "@types/node": "^12.12.54",
-    "@types/node-fetch": "^2.5.7",
     "@types/react": "^16.9.45",
     "@types/react-dom": "^16.9.8",
     "@types/react-helmet-async": "^1.0.3",
@@ -119,8 +112,7 @@
     "jsdom-global": "3.0.2",
     "lint-staged": "^9.5.0",
     "mini-css-extract-plugin": "^0.8.2",
-    "nodemon": "^1.19.4",
-    "opn-cli": "^5.0.0",
+    "nodemon": "^2.0.7",
     "prettier": "^1.19.1",
     "puppeteer": "^1.19.0",
     "react-dev-utils": "^9.0.3",
@@ -129,7 +121,7 @@
     "stats-webpack-plugin": "^0.7.0",
     "style-loader": "^1.2.1",
     "terser-webpack-plugin": "^1.4.4",
-    "typescript": "^3.9.7",
+    "typescript": "^4.2.3",
     "url-loader": "^2.3.0",
     "webpack": "^4.44.1",
     "webpack-bundle-analyzer": "^3.8.0",
@@ -138,10 +130,12 @@
     "webpack-hot-middleware": "^2.24.4",
     "webpack-manifest-plugin": "^2.0.4",
     "webpack-node-externals": "^1.7.2",
-    "write-file-webpack-plugin": "^4.5.1",
-    "yarn-or-npm": "^3.0.1"
+    "write-file-webpack-plugin": "^4.5.1"
   },
   "standard": {
     "parser": "babel-eslint"
+  },
+  "resolutions": {
+    "immer": "9.0.1"
   }
 }
