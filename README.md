@@ -22,8 +22,8 @@ Now open the browser and navigate to `http://localhost:3000` and you get your se
 Here are a few of the highlighted technologies used in this project, as well as a few anticipated technologies
 that will work their way into this project in the future:
 
-- [x] React
+- [x] React 17
 - [x] GraphQL
 - [x] React Router
-- [x] Apollo
-- [x] Emotion-js
+- [x] Apollo 3
+- [x] Emotion-js 11
